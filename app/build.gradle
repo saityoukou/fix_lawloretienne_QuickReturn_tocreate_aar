@@ -21,12 +21,12 @@ android {
     buildTypes {
         release {
             signingConfig signingConfigs.release
-            runProguard false
+            minifyEnabled false
             debuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            runProguard false
+            minifyEnabled false
             debuggable true
         }
     }
@@ -35,7 +35,7 @@ android {
         abortOnError false
         disable 'InvalidPackage'
     }
-    android.aaptOptions.useAaptPngCruncher = true
+    android.aaptOptions.useNewCruncher = true
     productFlavors {
     }
 }
